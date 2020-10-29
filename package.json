@@ -1,0 +1,30 @@
+{
+  "name": "employeetracker",
+  "version": "1.0.0",
+  "description": "Create an Employee management system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tbonexas/employeetracker.git"
+  },
+  "keywords": [
+    "employee",
+    "sql",
+    "node",
+    "tracker",
+    "js"
+  ],
+  "author": "Todd Wayment",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tbonexas/employeetracker/issues"
+  },
+  "homepage": "https://github.com/Tbonexas/employeetracker#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3",
+    "mysql": "^2.18.1"
+  }
+}
