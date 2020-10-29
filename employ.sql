@@ -1,0 +1,20 @@
+DROP DATABASE employeeDB; 
+
+CREATE DATABASE employeeDB; 
+
+USE employeeDB; 
+
+CREATE TABLE department(
+id INTEGER AUTO_INCREMENT UNIQUE,
+name VARCHAR(30) NOT NULL,
+PRIMARY KEY(id)
+);
+
+CREATE TABLE role(
+id INTEGER AUTO_INCREMENT UNIQUE,
+salary DECIMAL(10,2) NOT NULL,
+title VARCHAR(40) NOT NULL,
+department_id INTEGER NULL,
+FOREIGN KEY(department_id) REFERENCES department(id),
+PRIMARY KEY(id)
+);
