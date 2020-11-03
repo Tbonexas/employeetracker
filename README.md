@@ -20,6 +20,12 @@ View departments, roles, employees
 
 Update employee roles  
 ## Screenshots:  
+![image](https://user-images.githubusercontent.com/67118229/98038263-b0696680-1dd1-11eb-8aee-ea099510be43.png)  
+![image](https://user-images.githubusercontent.com/67118229/98038665-5cab4d00-1dd2-11eb-8db4-b09b726e7091.png)  
+![image](https://user-images.githubusercontent.com/67118229/98038707-6fbe1d00-1dd2-11eb-8cee-59e226fe4373.png)  
+![image](https://user-images.githubusercontent.com/67118229/98038808-94b29000-1dd2-11eb-96a3-a2d27d0bd8fe.png)  
+
+
 
 ## Demos:  
 [Link to demo](https://drive.google.com/file/d/1XM9FuT7A0Ab24c1qk2Doxiq3f1v-Rc3K/view)   

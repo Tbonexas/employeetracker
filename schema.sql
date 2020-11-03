@@ -46,13 +46,13 @@ INSERT INTO role (title, salary, department_id) VALUE ("Software Engineer", 1350
 INSERT INTO role (title, salary, department_id) VALUE ("Company Lawyer", 190000, 4);
 
 -- Employee seeds
-INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUE ("Rick", "Sanchez", null, 1);
-INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUE ("Morty", "Smith", null, 2);
-INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUE ("Summer", "Smith", null, 3);
-INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUE ("Beth", "Smith", null, 4);
-INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUE ("Jerry", "Smith", null, 5);
-INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUE ("Elon", "Tusk", null, 6)
-INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUE ("Sleepy", "Gary", null, 7);
+INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUE ("Rick", "Sanchez", 1, 1);
+INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUE ("Morty", "Smith", 2, 2);
+INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUE ("Summer", "Smith", 2, 3);
+INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUE ("Beth", "Smith", 2, 4);
+INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUE ("Jerry", "Smith", 2, 5);
+INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUE ("Elon", "Tusk", 3, 6)
+INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUE ("Sleepy", "Gary", 4, 7);
 
 -- Selecting for creating
 SELECT * FROM department;
