@@ -1,20 +1,60 @@
-DROP DATABASE employeeDB; 
+DROP DATABASE employee_trackerDB;
 
-CREATE DATABASE employeeDB; 
+CREATE DATABASE employee_trackerDB;
 
-USE employeeDB; 
+USE employee_trackerDB;
 
-CREATE TABLE department(
-id INTEGER AUTO_INCREMENT UNIQUE,
-name VARCHAR(30) NOT NULL,
-PRIMARY KEY(id)
+--Department Table
+CREATE TABLE department (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(40)
 );
 
-CREATE TABLE role(
-id INTEGER AUTO_INCREMENT UNIQUE,
-salary DECIMAL(10,2) NOT NULL,
-title VARCHAR(40) NOT NULL,
-department_id INTEGER NULL,
-FOREIGN KEY(department_id) REFERENCES department(id),
-PRIMARY KEY(id)
+-- Department Table "role"
+CREATE TABLE role (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(40),
+    salary DECIMAL,
+    department_id INT,
+    FOREIGN KEY (department_id) REFERENCES department(id)
 );
+
+-- Employee Role Table
+CREATE TABLE employee (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(40),
+    last_name VARCHAR(40),
+    manager_id INT,
+    role_id INT,
+    FOREIGN KEY (role_id) REFERENCES role(id),
+    FOREIGN KEY (manager_id) REFERENCES manager(id)
+);
+
+-- Seeds for department
+INSERT INTO department (name) VALUE ("Sales");
+INSERT INTO department (name) VALUE ("Engineering");
+INSERT INTO department (name) VALUE ("Finance");
+INSERT INTO department (name) VALUE ("Legal");
+
+-- Employee Role Seeds
+INSERT INTO role (title, salary, department_id) VALUE ("Lead Engineer", 145000, 2);
+INSERT INTO role (title, salary, department_id) VALUE ("Legal Team Mananger", 245000, 4);
+INSERT INTO role (title, salary, department_id) VALUE ("Accountant", 125000, 3);
+INSERT INTO role (title, salary, department_id) VALUE ("Sales Lead", 100000, 1);
+INSERT INTO role (title, salary, department_id) VALUE ("Salesperson", 75000, 1);
+INSERT INTO role (title, salary, department_id) VALUE ("Software Engineer", 135000, 2);
+INSERT INTO role (title, salary, department_id) VALUE ("Company Lawyer", 190000, 4);
+
+-- Employee seeds
+INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUE ("Rick", "Sanchez", null, 1);
+INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUE ("Morty", "Smith", null, 2);
+INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUE ("Summer", "Smith", null, 3);
+INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUE ("Beth", "Smith", null, 4);
+INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUE ("Jerry", "Smith", null, 5);
+INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUE ("Elon", "Tusk", null, 6)
+INSERT INTO employee (first_name, last_name, manager_id, role_id) VALUE ("Sleepy", "Gary", null, 7);
+
+-- Selecting for creating
+SELECT * FROM department;
+SELECT * FROM role;
+SELECT * FROM employee;
